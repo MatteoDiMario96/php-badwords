@@ -26,7 +26,7 @@ $prova = 'prova';
                 </p>
 
                 <h3>
-                    Lunghezza caratteri: <?php echo strlen($substituteWord) ?>
+                    Length paragrafo: <?php echo strlen($substituteWord) ?>
                 </h3>
             </article>
 
