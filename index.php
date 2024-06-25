@@ -19,13 +19,14 @@ $prova = 'prova';
             <article>
                 <p>
                     <?php 
-                        echo str_replace(trim($wordCensored1), '***', $paragrafo1);
+                        $substituteWord = str_replace(trim($wordCensored1), '***', $paragrafo1);
+                        echo $substituteWord;
                         print $prova;
                     ?>
                 </p>
 
                 <h3>
-                    Lunghezza caratteri: <?php echo strlen($paragrafo1) ?>
+                    Lunghezza caratteri: <?php echo strlen($substituteWord) ?>
                 </h3>
             </article>
 
