@@ -1,5 +1,5 @@
 <?php
-$paragrafo1 = 'mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza';
+$paragrafo1 = 'mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza mamma papà fratello sorella nonno nonna ragazzo ragazza';
 
 $wordCensored1  = $_GET["wordCensored1"];
 
@@ -18,7 +18,7 @@ $wordCensored1  = $_GET["wordCensored1"];
             <article>
                 <p>
                     <?php 
-                        echo $paragrafo1  
+                        echo str_replace($wordCensored1, '***', $paragrafo1)  
                     ?>
                 </p>
 
@@ -29,19 +29,19 @@ $wordCensored1  = $_GET["wordCensored1"];
 
             <div>
                 <form action="./index.php" method="get">
-                    <label for="wordCensored1">parola da censurare:</label>
+                    <label for="wordCensored1">Censura:</label>
                     <input type="text" name="wordCensored1" id="wordCensored1" required>
                     <button type="submit">
                         Modifica Paragrafo
                     </button>
                     <h5>
-                        Censura una di queste parole : mamma, papa, fratello, sorella, nonno, nonna ragazzo, ragazza
+                        Censura una parola, una sillaba, una lettera, quello che vuoi...
                     </h5>
 
                 </form>
             </div>
             <h3>
-                Parola censurata : <?php echo $wordCensored1 ?>
+                Percorso variabile e cos'hai censurato : <?php var_dump($wordCensored1)  ?>
             </h3>
         </section>
     </main>
