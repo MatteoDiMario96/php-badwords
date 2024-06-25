@@ -3,6 +3,7 @@ $paragrafo1 = 'mamma papà fratello sorella nonno nonna ragazzo ragazza mamma pa
 
 $wordCensored1  = $_GET["wordCensored1"];
 
+$prova = 'prova';
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,8 @@ $wordCensored1  = $_GET["wordCensored1"];
             <article>
                 <p>
                     <?php 
-                        echo str_replace(ltrim($wordCensored1), '***', $paragrafo1)  
+                        echo str_replace(trim($wordCensored1), '***', $paragrafo1);
+                        print $prova;
                     ?>
                 </p>
 
